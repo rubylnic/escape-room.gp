@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Escape Room. Лучшие квесты в Новосибирске">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Escape Room</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/raleway-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/raleway-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/raleway-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/raleway-extrabold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/raleway-black.woff2" as="font" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="background-container background-container--opened">
+    <header class="main-header">
+      <div class="main-header__container">
+        <div class="main-header__logo-menu">
+          <div class="main-header__logo">
+            <svg class="main-header__logo-img main-header__logo-img--desktop" width="134" height="50">
+              <use xlink:href="img/sprite_auto.svg#icon-logo-d" width="134" height="50"></use>
+            </svg>
+            <svg class="main-header__logo-img main-header__logo-img--mobile" width="96" height="36">
+              <use xlink:href="img/sprite_auto.svg#icon-logo-m" width="96" height="36"></use>
+            </svg>
+          </div>
+          <button class="main-header__menu-button" type="button">Меню</button>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__list main-nav__list--menu">
+            <li class="main-nav__item">
+              <a href="quests.html" class="main-nav__link">Квесты</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Новичкам</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Акции</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--contacts">
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link main-nav__link--location">Новосибирск</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="tel:+73832840160" class="main-nav__link">8 (383) 284 01 60</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="description description--closed">
+        <div class="description__container">
+          <h1 class="description__heading"><span class="visually-hidden">Escape Room. </span>Лучшие квесты в
+            Новосибирске </h1>
+          <p>Надоело проводить свободное время лёжа на диване? Игровые площадки
+            questroom на целый час погружают вас в мир незабываемых авантюр. Ищите подсказки, решайте головоломки и
+            находите выход из комнаты!</p>
+          <a class="description__button description__button--d" href="quests.html">Выбрать квест</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <section class="socials">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="socials__list">
+            <li class="socials__item socials__item--instagram">
+              <a href="https://www.instagram.com/" class="socials__link" aria-label="instagram"></a>
+            </li>
+            <li class="socials__item socials__item--vk">
+              <a href="https://www.vk.com/" class="socials__link" aria-label="vk"></a>
+            </li>
+          </ul>
+        </section>
+        <a href="#" class="footer__link">Задать вопрос</a>
+      </div>
+    </footer>
+  </div>
+  <section class="modal-question modal-question--closed">
+    <div class="modal-question__overlay">
+      <div class="modal-question__container">
+        <button class="modal-question__button-close" type="button" aria-label="Закрыть модальное окно"></button>
+        <h2 class="modal-question__heading">Задайте вопрос</h2>
+        <form method="post">
+          <ul class="list">
+            <li>
+              <label for="modal-name"> Чтобы мы смогли обращаться к вам, оставьте ваше имя </label>
+              <input type="text" id="modal-name" name="modal-name" minlength="2" placeholder="Имя" required="">
+            </li>
+            <li>
+              <label for="modal-email">Чтобы вы получили ответ, оставьте ваш e-mail </label>
+              <input type="email" id="modal-email" name="modal-email" placeholder="E-mail" required="">
+              <strong class="modal-question__error-message modal-question__error-message--hidden">Введён некорректный
+                e-mail, попробуйте заново</strong>
+            </li>
+            <li>
+              <label for="modal-text">Ваш вопрос</label>
+              <textarea id="modal-text" name="modal-comment" placeholder="Начните вводить ..."></textarea>
+            </li>
+          </ul>
+          <div class="modal-question__form-container">
+            <strong class="modal-question__error-message modal-question__error-message-checkbox modal-question__error-message-checkbox--hidden">Требуется согласие с пользовательским соглашением</strong>
+            <label for="modal-checkbox">
+              <input class="visually-hidden" type="checkbox" id="modal-checkbox" name="modal-checkbox" checked="">
+              <span class="modal-question__checkbox-indicator"></span>
+              Я согласен с <a class="modal-question__rules" href="#">правилами обработки персональных данных </a> и
+              пользовательским соглашением
+            </label>
+            <button aria-label="Отправить форму" type="submit">Отправить вопрос</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="modal-city modal-city--closed">
+    <div class="modal-city__overlay">
+      <div class="modal-city__container">
+        <button class="modal-city__button-close" type="button" aria-label="Закрыть окно выбора города"></button>
+        <h2 class="modal-city__heading">Ваш город:</h2>
+        <a href="#" class="modal-city__location">Определить местоположение</a>
+        <span class="modal-city__text">... или выберите вручную</span>
+        <ul class="modal-city__list">
+          <li class="modal-city__item">
+            <a href="#" class="modal-city__link modal-city__link--active">Новосибирск</a>
+          </li>
+          <li class="modal-city__item">
+            <a href="#" class="modal-city__link">Иркутск</a>
+          </li>
+          <li class="modal-city__item">
+            <a href="#" class="modal-city__link">Смоленск</a>
+          </li>
+          <li class="modal-city__item">
+            <a href="#" class="modal-city__link">Волгоград</a>
+          </li>
+          <li class="modal-city__item">
+            <a href="#" class="modal-city__link">Комсомольск-на-Амуре</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <script rel="preconnect" src="js/vendors.js"></script>
+  <script>
+    svg4everybody(); // run it now or whenever you are ready
+  </script>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
